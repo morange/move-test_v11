@@ -1,0 +1,23 @@
+#
+# TCEMAIN
+#
+# Gruppe für neue Seiten
+TCEMAIN {
+
+    # Owner be_groups UID for new pages
+    permissions {
+        # welche Benutzergruppe darf (show, edit, delete, new, editcontent)
+        # 7 ist Gruppe Seitenbaumrechte
+        groupid = 1
+
+        # vergebene Nutzerrechte
+        group = show, edit, new, editcontent
+    }
+
+
+    ### Kopierte Elemente nicht verstecken und Titel unveraendert lassen ###
+    table.tt_content {
+        disablePrependAtCopy = 1
+        disableHideAtCopy = 1
+    }
+}

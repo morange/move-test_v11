@@ -1,0 +1,47 @@
+base: 'https://move-v11.ddev.site'
+baseVariants:
+  -
+    base: 'https://move-v11.ddev.site'
+    condition: 'applicationContext == "Development"'
+errorHandling:
+  -
+    errorCode: 404
+    errorHandler: Page
+    errorContentSource: 't3://page?uid=3'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    typo3Language: de
+    locale: de_DE.UTF-8
+    iso-639-1: de
+    navigationTitle: Deutsch
+    hreflang: de-de
+    direction: ltr
+    flag: de
+    websiteTitle: ''
+redirects:
+  autoUpdateSlugs: true
+  autoCreateRedirects: true
+  redirectTTL: 3600
+  forceHttps: true
+  respectQueryParameters: true
+  keepQueryParameters: true
+  httpStatusCode: 301
+rootPageId: 1
+routeEnhancers:
+  PageTypeSuffix:
+    type: PageType
+    default: .html
+    map:
+      .html: 0
+      feed.xml: 9818
+      sitemap.xml: 1533906435
+routes:
+  - route: robots.txt
+    type: staticText
+    content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
+websiteTitle: 'mein Blog'
+xml_sitemap_path: sitemap.xml

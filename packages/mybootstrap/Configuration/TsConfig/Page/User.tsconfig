@@ -1,0 +1,39 @@
+
+## Seiten-IDs im Seitenbaum anzeigen
+options {
+
+    ## Größe der Thumbnails in der Dateiliste
+    file_list {
+        thumbnail.width = 128
+        thumbnail.height = 128
+    }
+
+    pageTree {
+        # show UID Pages
+        showPageIdWithTitle = 1
+
+        # show
+        showPathAboveMounts = 1
+
+        backgroundColor {
+            5 = orange
+            #609 = orange
+
+        }
+    }
+
+    # Seiten Cache leeren
+    clearCache.pages = 1
+    # Seiten Cache inkl. Template Cache leeren
+    clearCache.all = 1
+}
+options.pageTree.showPageIdWithTitle = 1
+
+# Remove "New" and "Create New wizard" for pages context menu (list module)
+options.contextMenu.table.pages.disableItems = new,newWizard
+
+# Remove "New" and "Create New wizard" in page tree context menu
+options.contextMenu.table.pages.tree.disableItems = new,newWizard
+
+# Remove the "More options" item in the page tree context menu and all its subelements
+options.contextMenu.table.pages.tree.disableItems = newWizard, pagesSort, pagesNewMultiple, openListModule, mountAsTreeRoot, exportT3d, importT3d, hideInMenus, showInMenus, permissions

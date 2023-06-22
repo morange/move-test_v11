@@ -1,0 +1,166 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+
+        backend_layout {
+            removeItems = pagets__2_columns, pagets__2_columns_25_75, pagets__2_columns_75_25, pagets__2_columns_50_50, pagets__2_columns_offset_right, pagets__2_columns, pagets__3_columns, pagets__simple, pagets__default, pagets__special_feature, pagets__special_start, pagets__subnavigation_left_2_columns, pagets__subnavigation_left, pagets__subnavigation_right_2_columns, pagets__subnavigation_right
+        }
+
+        backend_layout_next_level {
+            removeItems = pagets__2_columns, pagets__2_columns_25_75, pagets__2_columns_75_25, pagets__2_columns_50_50, pagets__2_columns_offset_right, pagets__2_columns, pagets__3_columns, pagets__simple, pagets__default, pagets__special_feature, pagets__special_start, pagets__subnavigation_left_2_columns, pagets__subnavigation_left, pagets__subnavigation_right_2_columns, pagets__subnavigation_right
+        }
+    }
+
+    tt_content {
+        CType {
+            # removeItems = container_1_columns, container_2_columns, container_2_columns_left, container_2_columns_right, container_3_columns, container_4_columns, header, text, textpic, image, csv, bullets, table, uploads, list, div, html, accordion, timeline, audio, external_media, listgroup, media, form_formframework, felogin_login
+        }
+
+
+        ## 1 Spalter
+        frame_layout.types.container_1_columns {
+            addItems {
+                nogutter = kein Abstand
+            }
+        }
+
+        space_before_class.types.container_1_columns {
+            addItems {
+                nodistance = kein Abstand
+            }
+        }
+
+        space_after_class.types.container_1_columns {
+            addItems {
+                nodistance = kein Abstand
+            }
+        }
+        frame_class.types.container_1_columns {
+            addItems {
+                rahmen = Rahmen
+            }
+        }
+        frame_class.types.image {
+            addItems {
+                rahmen = Rahmen
+            }
+        }
+
+        ## 2 Spalter
+        frame_layout.types.container_2_columns {
+            addItems {
+                nogutter = kein Abstand
+                boxpadding = Abstand in Boxen
+                contentcentered = Inhalte vertikal zentrieren
+            }
+        }
+        layout.types.container_2_columns {
+            addItems {
+                # 100 = Inhalte vertikal zentrieren
+                200 = durchscheinende Fläche
+            }
+        }
+        frame_class.types.container_2_columns {
+            addItems {
+                rahmen = Rahmen
+            }
+        }
+
+        space_before_class.types.container_2_columns {
+            addItems {
+                super-large = Super groß
+                nodistance = kein Abstand
+            }
+        }
+
+        space_after_class.types.container_2_columns {
+            addItems {
+                super-large = Super groß
+                nodistance = kein Abstand
+            }
+        }
+
+        ## Image
+        frame_layout.types.image {
+            addItems {
+                hideimage = verstecke das Bild
+            }
+        }
+
+        ## TextMedia
+        layout.types.textmedia {
+            addItems {
+                400 = rundes Bild
+            }
+        }
+        frame_layout.types.textmedia {
+            addItems {
+                contentcentered = Inhalte vertikal zentrieren
+                smallercontent = Box mit kleinerer Schrift
+                ## smallercontent-coleredbox = farbige Box mit kleinerer Schrift
+                linkstyling = Link Styling vgl. Partner)
+            }
+        }
+        frame_class.types.textmedia {
+            addItems {
+                bottomline = Line unten
+            }
+        }
+        space_before_class.types.textmedia {
+            addItems {
+                super-large = Super groß
+                nodistance = kein Abstand
+            }
+
+            removeItems = extra-small, nodistance
+        }
+        space_after_class.types.textmedia {
+            addItems {
+                super-large = Super groß
+                nodistance = kein Abstand
+            }
+
+            removeItems = extra-small, nodistance
+        }
+
+        ## Texticon
+        layout.types.texticon {
+            addItems {
+                300 = SVG Logo
+                301 = SVG blau
+                302 = SVG braun
+            }
+        }
+        frame_layout.types.texticon {
+            addItems {
+                smallercontent = Box mit kleinerer Schrift
+                smallercontent-coleredbox = farbige Box mit kleinerer Schrift
+                linkstyling = Link Styling vgl. Partner)
+            }
+        }
+        frame_class.types.texticon {
+            addItems {
+                lineBetweenSvg = Line zwischen Grafik und Überschrift
+                bottomline = Line unten
+            }
+        }
+        space_before_class.types.texticon {
+            addItems {
+                super-large = Super groß
+                nodistance = kein Abstand
+            }
+
+            removeItems = large, nodistance
+        }
+        space_after_class.types.texticon {
+            addItems {
+                super-large = Super groß
+                nodistance = kein Abstand
+            }
+
+            removeItems = large, nodistance
+        }
+    }
+}
