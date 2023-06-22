@@ -1,0 +1,18 @@
+######################
+#### DEPENDENCIES ####
+######################
+
+@import "EXT:mybootstrap/Configuration/TypoScript/Extension/*.typoscript"
+
+[applicationContext == "Development"]
+    config {
+
+        # Enable TYPO3 Cache
+        no_cache = 0
+
+        compressCss = 0
+        concatenateCss = 0
+        compressJs = 0
+        concatenateJs = 0
+    }
+[END]

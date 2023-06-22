@@ -1,3 +1,5 @@
+
+
 base: 'https://move-v11.ddev.site'
 baseVariants:
   -
@@ -32,6 +34,7 @@ redirects:
   httpStatusCode: 301
 rootPageId: 1
 routeEnhancers:
+
   PageTypeSuffix:
     type: PageType
     default: .html
@@ -40,8 +43,17 @@ routeEnhancers:
       feed.xml: 9818
       sitemap.xml: 1533906435
 routes:
-  - route: robots.txt
+  -
+    route: robots.txt
     type: staticText
     content: "User-agent: *\r\nDisallow: /typo3/\r\nDisallow: /typo3_src/\r\nAllow: /typo3/sysext/frontend/Resources/Public/*\r\n"
-websiteTitle: 'mein Blog'
+websiteTitle: 'move:elevator Test'
 xml_sitemap_path: sitemap.xml
+
+imports:
+  - { resource: 'EXT:blog/Configuration/Routes/BlogCategory.yaml' }
+  - { resource: 'EXT:blog/Configuration/Routes/BlogTag.yaml' }
+  - { resource: 'EXT:blog/Configuration/Routes/BlogArchive.yaml' }
+  - { resource: 'EXT:blog/Configuration/Routes/BlogAuthorPosts.yaml' }
+  - { resource: 'EXT:blog/Configuration/Routes/BlogFeedWidget.yaml' }
+  - { resource: 'EXT:blog/Configuration/Routes/BlogPosts.yaml' }

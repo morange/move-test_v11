@@ -1,0 +1,23 @@
+## Constanten Blog
+page.theme {
+    googleFont.font = Nunito
+    cookieconsent.enable = 0
+}
+
+
+plugin.tx_blog.settings {
+    meta.postfooter.modifier = extended
+    meta.postheader.elements.tags.enable = 1
+    meta.postfooter.elements.authors.enable = 1
+    meta.teaserheader.elements.categories.enable = 1
+
+
+    lists.featuredImage.height = 800c
+    lists.featuredImage.width = 1320c
+    comments.features.urls = 1
+
+    post.featuredImage.width = 1320c
+    post.featuredImage.height = 800c
+    lists.pagination.itemsPerPage = 5
+    meta.listheader.elements.categories.enable = 1
+}

@@ -1,0 +1,43 @@
+###################
+#### BLOG POST ####
+###################
+[blog.isPost() || blog.isPage()]
+    page {
+        10 {
+            templateName >
+            templateName = BlogList
+            layoutRootPaths {
+                -1579272243 = EXT:mybootstrap/Resources/Private/Layouts/Extensions/Blog/Layouts/Page/
+            }
+            templateRootPaths {
+                -1579272243 = EXT:mybootstrap/Resources/Private/Templates/Extensions/Blog/Templates/Page/
+            }
+        }
+
+        20 {
+            templateName >
+            templateName = BlogPost
+            templateRootPaths {
+                -1579272243 = EXT:mybootstrap/Resources/Private/Templates/Extensions/Blog/Templates/Page/
+            }
+        }
+    }
+
+    plugin.tx_blog {
+        view {
+            partialRootPaths {
+                0 = EXT:blog/Resources/Private/Partials/
+                1 = {$plugin.tx_blog.view.partialRootPaths}
+                10 = EXT:mybootstrap/Resources/Private/Partials/Extensions/Blog/Partials/
+            }
+        }
+    }
+[end]
+
+[blog.isPost()]
+    page {
+        10 {
+            templateName = BlogPost
+        }
+    }
+[end]
